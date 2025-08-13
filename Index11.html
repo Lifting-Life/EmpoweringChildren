@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifting Life | A Blueprint for Human Potential</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'll-green': '#92C83E',
+                        'll-brown': '#8B5E3C',
+                        'll-beige': '#F0E6D8',
+                        'll-white': '#FAF9F7',
+                        'll-accent': '#F7941D',
+                        'll-dark': '#2F261F',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-section {
+            background-image: linear-gradient(rgba(47, 38, 31, 0.7), rgba(47, 38, 31, 0.7)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: #92C83E; /* ll-green */
+        }
+    </style>
+</head>
+
+<body class="font-sans text-ll-dark bg-ll-white">
+
+<header class="bg-ll-white/95 backdrop-blur-lg shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="#home" aria-label="Lifting Life Home">
+            <img src="https://placehold.co/160x50/8B5E3C/FAF9F7?text=Lifting+Life" alt="Lifting Life Logo" class="h-12 w-auto">
+        </a>
+        <nav class="hidden lg:flex items-center space-x-8">
+            <a href="#about" class="text-ll-dark hover:text-ll-green font-semibold transition duration-300">Mission</a>
+            <a href="#pathway" class="text-ll-dark hover:text-ll-green font-semibold transition duration-300">Pathway</a>
+            <a href="#impact" class="text-ll-dark hover:text-ll-green font-semibold transition duration-300">Impact</a>
+            <a href="#leadership" class="text-ll-dark hover:text-ll-green font-semibold transition duration-300">Leadership</a>
+            <a href="#get-involved" class="text-ll-dark hover:text-ll-green font-semibold transition duration-300">Get Involved</a>
+        </nav>
+        <a href="#donate" class="hidden lg:inline-block bg-ll-accent text-white px-7 py-3 rounded-full font-bold tracking-wider cta-button">DONATE</a>
+        <div class="lg:hidden">
+            <button id="mobile-menu-button" class="text-ll-dark focus:outline-none" aria-label="Open mobile menu"><i class="fas fa-bars text-2xl"></i></button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-ll-white border-t border-ll-beige">
+        <a href="#about" class="block px-6 py-4 text-ll-dark hover:bg-ll-beige">Mission</a>
+        <a href="#pathway" class="block px-6 py-4 text-ll-dark hover:bg-ll-beige">Pathway</a>
+        <a href="#impact" class="block px-6 py-4 text-ll-dark hover:bg-ll-beige">Impact</a>
+        <a href="#leadership" class="block px-6 py-4 text-ll-dark hover:bg-ll-beige">Leadership</a>
+        <a href="#get-involved" class="block px-6 py-4 text-ll-dark hover:bg-ll-beige">Get Involved</a>
+        <div class="p-4"><a href="#donate" class="block w-full bg-ll-accent text-white text-center font-bold py-3 rounded-full">DONATE</a></div>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero-section text-white min-h-[90vh] flex items-center">
+        <div class="container mx-auto px-4 sm:px-6 text-center" data-aos="fade-up">
+            <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4">
+                Potential is Universal. Opportunity is Not.
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto font-light">
+                Lifting Life builds the bridge between the two, shaping the next generation of leaders.
+            </p>
+            <a href="#about" class="bg-ll-green text-white px-10 py-4 rounded-full font-bold text-lg tracking-wider cta-button">Discover Our Mission</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                 <h2 class="font-heading text-4xl md:text-5xl font-bold text-ll-dark section-title" data-aos="fade-up">Our Mission</h2>
+                 <p class="text-lg text-ll-dark leading-relaxed mt-10" data-aos="fade-up" data-aos-delay="100">
+                    Lifting Life empowers foster youth and underrepresented individuals to build stable, flourishing lives. Through mentorship, education, and career-readiness programs, we help them plant the seeds of their future and thrive in the AI-driven era.
+                 </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mt-20 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col items-center">
+                    <div class="bg-ll-beige rounded-full p-5 mb-3"><i class="fas fa-hand-holding-heart fa-2x text-ll-brown"></i></div>
+                    <h3 class="font-heading text-xl font-bold">Hope</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-ll-beige rounded-full p-5 mb-3"><i class="fas fa-lightbulb fa-2x text-ll-brown"></i></div>
+                    <h3 class="font-heading text-xl font-bold">Empowerment</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-ll-beige rounded-full p-5 mb-3"><i class="fas fa-tree fa-2x text-ll-brown"></i></div>
+                    <h3 class="font-heading text-xl font-bold">Resilience</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-ll-beige rounded-full p-5 mb-3"><i class="fas fa-key fa-2x text-ll-brown"></i></div>
+                    <h3 class="font-heading text-xl font-bold">Independence</h3>
+                </div>
+                <div class="flex flex-col items-center col-span-2 md:col-span-1">
+                    <div class="bg-ll-beige rounded-full p-5 mb-3"><i class="fas fa-users fa-2x text-ll-brown"></i></div>
+                    <h3 class="font-heading text-xl font-bold">Community</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pathway" class="py-24 md:py-32 bg-ll-beige">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                 <h2 class="font-heading text-4xl md:text-5xl font-bold text-ll-dark section-title" data-aos="fade-up">Our Pathway to Independence</h2>
+                 <p class="text-lg text-ll-dark leading-relaxed mt-10 mb-20" data-aos="fade-up" data-aos-delay="100">
+                    We guide our members along a three-stage journey, with mentorship as the constant thread weaving it all together. Every step is designed to build confidence, capability, and community.
+                 </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-ll-white p-10 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-4"><span class="bg-ll-green text-white font-bold rounded-full px-4 py-1">STAGE 1</span></div>
+                    <i class="fas fa-seedling fa-3x text-ll-green mb-6"></i>
+                    <h3 class="font-heading text-3xl font-bold mb-4">Education</h3>
+                    <p class="text-ll-dark leading-relaxed"> We guide our members in discovering their interests and securing scholarships, while building practical skills through workshops in English.</p>
+                </div>
+                <div class="bg-ll-white p-10 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-4"><span class="bg-ll-brown text-white font-bold rounded-full px-4 py-1">STAGE 2</span></div>
+                    <i class="fas fa-school fa-3x text-ll-brown mb-6"></i>
+                    <h3 class="font-heading text-3xl font-bold mb-4">Stability Through Work</h3>
+                    <p class="text-ll-dark leading-relaxed">We move members toward independence through literacy support, vocational training, and job readiness skills for apprenticeships and college.</p>
+                </div>
+                <div class="bg-ll-white p-10 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-4"><span class="bg-ll-accent text-white font-bold rounded-full px-4 py-1">STAGE 3</span></div>
+                    <i class="fas fa-landmark fa-3x text-ll-accent mb-6"></i>
+                    <h3 class="font-heading text-3xl font-bold mb-4">AI-Era Readiness</h3>
+                    <p class="text-ll-dark leading-relaxed">We prepare members for long-term success with financial literacy, digital skills, career coaching, and guidance toward home ownership and self-reliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-24 md:py-32 bg-ll-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                 <h2 class="font-heading text-4xl md:text-5xl font-bold text-ll-dark section-title" data-aos="fade-up">Did you know?!</h2>
+                 <p class="text-lg text-ll-dark leading-relaxed mt-10" data-aos="fade-up" data-aos-delay="100">
+                    
+                 </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 text-center">
+                <div class="bg-ll-beige p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <p class="font-heading text-5xl font-extrabold text-ll-brown">70%</p>
+                    <p class="mt-2 text-ll-dark font-medium">of trafficking victims in the U.S. spent time in foster care. We provide a safety net.</p>
+                </div>
+                <div class="bg-ll-beige p-8 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <p class="font-heading text-5xl font-extrabold text-ll-brown">3%</p>
+                    <p class="mt-2 text-ll-dark font-medium">of foster youth earn a college degree. We build pathways to education and careers.</p>
+                </div>
+                <div class="bg-ll-beige p-8 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <p class="font-heading text-5xl font-extrabold text-ll-brown">20,000</p>
+                    <p class="mt-2 text-ll-dark font-medium">youth age out of the system each year. We offer a community that never expires.</p>
+                </div>
+            </div>
+             <div class="grid md:grid-cols-2 gap-12 items-center mt-24">
+                <div class="order-2 md:order-1" data-aos="fade-right">
+                    <h3 class="font-heading text-4xl font-bold text-ll-dark mb-4">Our Impact</h3>
+                    <p class="text-ll-dark mb-4 text-lg leading-relaxed">
+                        Story
+                    </p>
+                    <a href="#" class="text-ll-brown hover:underline font-semibold text-lg">Read More</a>
+                </div>
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1621992025815-58585b437433?q=80&w=1887&auto=format&fit=crop" alt="Photo" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-24 md:py-32 bg-ll-dark text-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <div data-aos="zoom-in">
+                    <img src="https://placehold.co/150x150/FAF9F7/2F261F?text=HS" class="rounded-full shadow-lg mx-auto mb-8" alt="Founder Portrait">
+                    <p class="font-serif text-3xl md:text-4xl leading-relaxed italic mb-6">"I grew up in the foster system, where survival often came before dreams. My life changed because mentors saw potential in me, and education expanded my horizons. Too many others never get that chance. Lifting Life is my answer, a global movement bringing those same opportunities, tools, and unwavering belief to underrepresented children, empowering them to rise from survival to leadership."</p>
+                    <p class="text-xl font-semibold text-ll-green">- Hristijan Stojković, Founder</p>
+                </div>
+                <div class="mt-16 pt-12 border-t border-gray-700" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold tracking-widest uppercase text-gray-400 mb-6">Board of Directors</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-x-12 gap-y-4 text-lg">
+                        <p class="font-medium">Jonathan Burdick</p>
+                        <span class="hidden md:inline text-ll-green">&bull;</span>
+                        <p class="font-medium">Slavko Bradić</p>
+                        <span class="hidden md:inline text-ll-green">&bull;</span>
+                        <p class="font-medium">Hristijan Stojković</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-involved" class="py-24 md:py-32 bg-ll-brown text-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold section-title !text-white ![--ll-green:white]" data-aos="fade-up">Every Acorn Can Become an Oak</h2>
+            <p class="text-lg text-gray-200 leading-relaxed mt-10 mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Transformation is possible with support. You have the power to provide the soil of knowledge, the light of guidance, and the roots of community. Join us.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+                <div class="bg-ll-white text-ll-dark p-8 rounded-lg flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-heading text-3xl font-bold mb-4">Become a Mentor</h3>
+                    <p class="text-ll-dark mb-8 flex-grow">Be the consistent, caring adult who changes a life forever. Share your wisdom and experience to guide a young person on their journey to independence.</p>
+                    <a href="mailto:info@liftinglife.org?subject=Mentorship Inquiry" class="bg-ll-dark text-white w-full text-center py-3 px-6 rounded-full font-bold tracking-wider cta-button block">Inquire Now</a>
+                </div>
+                <div class="bg-ll-green text-white p-8 rounded-lg flex flex-col" data-aos="fade-up" data-aos-delay="300" id="donate">
+                    <h3 class="font-heading text-3xl font-bold mb-4">Donate</h3>
+                    <p class="mb-8 flex-grow">Every gift creates roots for independence and growth. Your support turns uncertainty into opportunity and plants the seeds for the youth.</p>
+                    <a href="#" class="bg-white text-ll-green w-full text-center py-3 px-6 rounded-full font-bold tracking-wider cta-button block">Give Securely</a>
+                </div>
+                <div class="bg-ll-white text-ll-dark p-8 rounded-lg flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="font-heading text-3xl font-bold mb-4">Partner With Us</h3>
+                    <p class="text-ll-dark mb-8 flex-grow">Empower a new generation of resilient, self-sufficient leaders by collaborating with Lifting Life. Let's create systemic change together.</p>
+                    <a href="mailto:info@liftinglife.org?subject=Partnership Inquiry" class="bg-ll-dark text-white w-full text-center py-3 px-6 rounded-full font-bold tracking-wider cta-button block">Become a Partner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ll-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <img src="https://placehold.co/180x55/FAF9F7/2F261F?text=Lifting+Life" alt="Lifting Life Logo" class="h-12 w-auto mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">A world where every young person, regardless of their start in life, has the tools to become fully independent.</p>
+                    <div class="mt-4">
+                        <a href="mailto:info@liftinglife.org" class="text-gray-300 hover:text-white transition duration-300">Contact email: info@liftinglife.org</a>
+                    </div>
+                </div>
+                <div class="md:text-center">
+                    <h4 class="font-heading text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">Mission</a></li>
+                        <li><a href="#pathway" class="text-gray-400 hover:text-white">Pathway</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-white">Impact</a></li>
+                        <li><a href="#leadership" class="text-gray-400 hover:text-white">Leadership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold mb-4 md:text-center">Get Involved</h4>
+                    <ul class="space-y-2 md:text-center">
+                        <li><a href="#donate" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="#get-involved" class="text-gray-400 hover:text-white">Become a Mentor</a></li>
+                        <li><a href="#get-involved" class="text-gray-400 hover:text-white">Partner With Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400 mb-4">Get impact updates and see the lives you’re helping lift.</p>
+                <form action="#" class="max-w-md mx-auto flex gap-2">
+                    <input type="email" placeholder="Your Email Address" class="w-full px-4 py-2 rounded-full text-ll-dark bg-ll-white" required>
+                    <button type="submit" class="bg-ll-green text-white px-6 py-2 rounded-full font-bold">Sign Up</button>
+                </form>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="mailto:info@liftinglife.org" class="text-gray-400 hover:text-white" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                </div>
+                <p class="text-gray-500 text-sm mt-8">&copy; 2025 Lifting Life. </p>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-quad' });
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    document.querySelectorAll('#mobile-menu a, .cta-button, .container nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (link.getAttribute('href').startsWith('#')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
